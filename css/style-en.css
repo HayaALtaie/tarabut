@@ -22,5 +22,57 @@ html[dir="ltr"] .hero-subtitle::before {
 }
 
 html[dir="ltr"] .hero-title {
+    line-height: 1.2;
+}
+
+html[dir="ltr"] .about-description {
+    line-height: 1.6;
+}
+
+html[dir="ltr"] .section-title {
+    line-height: 1.2;
+}
+
+html[dir="ltr"] .values-list li {
+    line-height: 1.5;
+}
+
+html[dir="ltr"] .hero-title {
     text-align: left;
+}
+
+html[dir="ltr"] .experience-badge {
+    left: auto;
+    right: -40px;
+}
+
+html[dir="ltr"] .blue-circle-top {
+    right: auto;
+    left: -50px;
+}
+
+html[dir="ltr"] .about-image {}
+
+html[dir="ltr"] .about-text {
+    text-align: left;
+}
+
+html[dir="ltr"] .about-container {
+    flex-direction: row-reverse;
+}
+
+html[dir="ltr"] .about-text {
+    text-align: left;
+}
+
+html[dir="ltr"] .section-tag {
+    justify-content: flex-start;
+}
+
+html[dir="ltr"] .contact-number {
+    direction: ltr;
+}
+
+html[dir="ltr"] .exp-text {
+    font-size: 14px;
 }

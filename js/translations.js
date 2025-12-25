@@ -10,7 +10,18 @@ const translations = {
         hero_subtitle: 'نحن نعمل على',
         hero_title: 'خدمات تأهيل وصيانة المنشآت <br> والضيافة والتنظيف والإقامة <br> وخدمات أمن المنشآت <br> والموظفين',
         hero_btn: 'المزيد',
-        contact_number: '07834434800'
+        contact_number: '07834434800',
+        about_tag: 'عن ترابط',
+        about_title: 'من نحن',
+        about_desc: 'شركة ترابط للخدمات والمقاولات العامة وتوظيف القوى العاملة ذ.م.م. تعتبر ترابط من اولى الشركات الرائدة التي تقدم حزمة متنوعة من الخدمات في مجالات النقل، وتأهيل وصيانة المنشآت، وحماية المنشآت والأفراد، وكذلك الاقامة والضيافة والتنظيف. مقرنا الرئيسي في بغداد، الكرادة، شارع العرصات. وتضم فريق عمل محترف يتجاوز عدده 1000 موظف. بدأت شركة ترابط مسيرتها المهنية في عام 2019، متميزة بالتزامها بتقديم الخدمات بسرعة وجودة عالية، مما جعلها شريكا موثوقا لعملائها. يتميز فريقنا بالاحترافية والتخصص في مجالاتهم، ونعتمد على حلول ذكية تدعم متطلبات العمل.',
+        about_values_title: 'قيمنا',
+        about_value_1: 'التركيز على العملاء',
+        about_value_2: 'اهمية العمل الجماعي',
+        about_value_3: 'اهمية النمو المستدام والمسؤول',
+        about_contact_label: 'اتصل بنا',
+        about_contact_number: '077834434800',
+        year_exp: '15',
+        year_exp_text: 'سنة من الخبرات'
     },
     en: {
         lang_btn: '🇮🇶 العربية',
@@ -23,6 +34,17 @@ const translations = {
         hero_subtitle: 'We work on',
         hero_title: 'Facility Rehabilitation & Maintenance <br> Hospitality, Cleaning & Accommodation <br> Facility Security Services <br> & Staffing',
         hero_btn: 'Read More',
-        contact_number: '07834434800'
+        contact_number: '07834434800',
+        about_tag: 'About Tarabut',
+        about_title: 'Who We Are',
+        about_desc: 'Tarabut General Services, Contracting and Manpower Recruitment LLC. Tarabut is considered one of the leading companies providing a diverse package of services in the fields of transportation, facility rehabilitation and maintenance, protection of facilities and individuals, as well as accommodation, hospitality and cleaning. Our headquarters is in Baghdad, Karrada, Al-Arasat Street. It includes a professional team exceeding 1000 employees. Tarabut began its professional career in 2019, distinguished by its commitment to providing services quickly and with high quality, making it a reliable partner for its clients. Our team is characterized by professionalism and specialization in their fields, and we rely on smart solutions that support work requirements.',
+        about_values_title: 'Our Values',
+        about_value_1: 'Customer Focus',
+        about_value_2: 'Importance of Teamwork',
+        about_value_3: 'Importance of Sustainable & Responsible Growth',
+        about_contact_label: 'Call Us',
+        about_contact_number: '077834434800',
+        year_exp: '15',
+        year_exp_text: 'Years of Experience'
     }
 };
