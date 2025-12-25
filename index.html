@@ -8,10 +8,13 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style-en.css" />
   <title>Tarabut</title>
 </head>
 
 <body>
+
+  <button id="lang-toggle" class="lang-btn" data-i18n="lang_btn">🇺🇸 English</button>
 
   <header class="site-header">
     <div class="header-inner">
@@ -23,18 +26,18 @@
 
       <nav class="main-nav">
         <ul>
-          <li><a href="#" class="active">الرئيسية</a></li>
-          <li><a href="#">من نحن</a></li>
-          <li><a href="#">الخدمات</a></li>
-          <li><a href="#">الاخبار</a></li>
-          <li><a href="#">عملائنا</a></li>
-          <li><a href="#">تواصل معنا</a></li>
+          <li><a href="#" class="active" data-i18n="nav_home">الرئيسية</a></li>
+          <li><a href="#" data-i18n="nav_about">من نحن</a></li>
+          <li><a href="#" data-i18n="nav_services">الخدمات</a></li>
+          <li><a href="#" data-i18n="nav_news">الاخبار</a></li>
+          <li><a href="#" data-i18n="nav_clients">عملائنا</a></li>
+          <li><a href="#" data-i18n="nav_contact">تواصل معنا</a></li>
         </ul>
       </nav>
 
       <div class="top-bar">
         <div class="contact-info">
-          <span>07834434800</span>
+          <span data-i18n="contact_number">07834434800</span>
           <div class="phone-icon-circle">
             <i class="fas fa-phone-alt"></i>
           </div>
@@ -47,8 +50,8 @@
     <div class="hero-overlay"></div>
     <div class="hero-content container">
       <div class="text-content">
-        <p class="hero-subtitle">نحن نعمل على</p>
-        <h1 class="hero-title">
+        <p class="hero-subtitle" data-i18n="hero_subtitle">نحن نعمل على</p>
+        <h1 class="hero-title" data-i18n="hero_title">
           خدمات تأهيل وصيانة المنشآت <br>
           والضيافة والتنظيف والإقامة <br>
           وخدمات أمن المنشآت <br>
@@ -58,6 +61,8 @@
     </div>
   </section>
 
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

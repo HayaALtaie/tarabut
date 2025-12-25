@@ -8,9 +8,31 @@
 }
 
 body {
-  direction: rtl;
   overflow-x: hidden;
 }
+
+.lang-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #1062a5;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+  background-color: #0d518c;
+  transform: translateY(-2px);
+}
+
+
 
 .site-header {
   position: absolute;
