@@ -164,6 +164,15 @@ body {
   padding: 0 5%;
 }
 
+.text-content {
+  background-color: rgba(44, 62, 80, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 650px;
+}
+
 .hero-subtitle {
   display: flex;
   align-items: center;
@@ -172,7 +181,7 @@ body {
   margin-bottom: 20px;
 }
 
-.hero-subtitle::before {
+.hero-subtitle::after {
   content: '';
   display: block;
   width: 40px;
@@ -181,9 +190,9 @@ body {
 }
 
 .hero-title {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1.4;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.5;
   margin-bottom: 30px;
 }
 
