@@ -68,7 +68,11 @@ const translations = {
         member_7_name: 'ابراهيم يونس ناجي',
         member_7_role: 'قائد فريق تخطيط المنشآت',
         member_8_name: 'فاخر شفيق عبيد',
-        member_8_role: 'قائد فريق أنظمة المراقبة'
+        member_8_role: 'قائد فريق أنظمة المراقبة',
+        stats_clients: 'عدد العملاء',
+        stats_gov: 'خدماتنا في المحافظات',
+        stats_projects: 'عدد المشاريع',
+        stats_employees: 'عدد الموظفين'
     },
     en: {
         lang_btn: '🇮🇶 العربية',
@@ -139,6 +143,10 @@ const translations = {
         member_7_name: 'Ibrahim Younis Naji',
         member_7_role: 'Facility Planning Team Leader',
         member_8_name: 'Fakher Shafeeq Obaid',
-        member_8_role: 'Surveillance Systems Team Leader'
+        member_8_role: 'Surveillance Systems Team Leader',
+        stats_clients: 'Number of Clients',
+        stats_gov: 'Our Services in Governorates',
+        stats_projects: 'Number of Projects',
+        stats_employees: 'Number of Employees'
     }
 };

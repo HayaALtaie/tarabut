@@ -937,6 +937,77 @@ section {
   border-bottom-right-radius: 50px;
 }
 
+.stats-section {
+  padding: 100px 0;
+  background-color: #1f2c56;
+  background-image: url('../assets/images/static-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional: Add a subtle overlay to simulate the world map dots more closely if needed */
+.stats-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(31, 44, 86, 0.6);
+  /* Overlay to ensure text readability */
+  pointer-events: none;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: 72px;
+  font-weight: 800;
+  color: #2b7dde;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.stat-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+
+  .stat-number {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .team-section {
   padding: 100px 0;
   background-color: #fff;
