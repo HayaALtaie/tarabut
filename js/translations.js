@@ -72,7 +72,21 @@ const translations = {
         stats_clients: 'عدد العملاء',
         stats_gov: 'خدماتنا في المحافظات',
         stats_projects: 'عدد المشاريع',
-        stats_employees: 'عدد الموظفين'
+        stats_employees: 'عدد الموظفين',
+        contact_title: 'تواصل معنا',
+        contact_subtitle: 'قدم طلبك عبر الاستمارة للحصول على خدماتنا',
+        field_name: 'الاسم',
+        field_company: 'اسم الشركة',
+        field_email: 'الايميل',
+        field_phone: 'الهاتف',
+        field_service: 'نوع الخدمة',
+        field_governorate: 'المحافظة',
+        field_message: 'اكتب رسالة',
+        btn_send: 'ارسال',
+        contact_mobile_label: 'رقم الموبايل',
+        contact_email_label: 'ايميل الكتروني',
+        contact_address_label: 'عنوان مقر الشركة',
+        contact_address_desc: 'يقع مقرنا الرئيسي في بغداد، الكرادة، شارع العرصات. ونعمل على توسيع نطاق خدماتنا لتشمل جميع أنحاء العراق.'
     },
     en: {
         lang_btn: '🇮🇶 العربية',
@@ -147,6 +161,20 @@ const translations = {
         stats_clients: 'Number of Clients',
         stats_gov: 'Our Services in Governorates',
         stats_projects: 'Number of Projects',
-        stats_employees: 'Number of Employees'
+        stats_employees: 'Number of Employees',
+        contact_title: 'Contact Us',
+        contact_subtitle: 'Submit your request via the form to get our services',
+        field_name: 'Name',
+        field_company: 'Company Name',
+        field_email: 'Email',
+        field_phone: 'Phone',
+        field_service: 'Service Type',
+        field_governorate: 'Governorate',
+        field_message: 'Write a message',
+        btn_send: 'Send',
+        contact_mobile_label: 'Mobile Number',
+        contact_email_label: 'Email',
+        contact_address_label: 'Company Address',
+        contact_address_desc: 'Our headquarters is located in Baghdad, Karrada, Al-Arasat Street, and we are working to expand our services to include all of Iraq.'
     }
 };

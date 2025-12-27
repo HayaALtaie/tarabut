@@ -23,6 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             });
+
+            const placeholders = document.querySelectorAll('[data-i18n-placeholder]');
+            placeholders.forEach(element => {
+                const key = element.getAttribute('data-i18n-placeholder');
+                if (t[key]) {
+                    element.setAttribute('placeholder', t[key]);
+                }
+            });
         }
 
         if (typeof goToSlide === 'function') {
