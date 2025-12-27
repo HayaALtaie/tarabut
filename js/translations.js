@@ -86,7 +86,11 @@ const translations = {
         contact_mobile_label: 'رقم الموبايل',
         contact_email_label: 'ايميل الكتروني',
         contact_address_label: 'عنوان مقر الشركة',
-        contact_address_desc: 'يقع مقرنا الرئيسي في بغداد، الكرادة، شارع العرصات. ونعمل على توسيع نطاق خدماتنا لتشمل جميع أنحاء العراق.'
+        contact_address_desc: 'يقع مقرنا الرئيسي في بغداد، الكرادة، شارع العرصات. ونعمل على توسيع نطاق خدماتنا لتشمل جميع أنحاء العراق.',
+        footer_call: 'اتصل بنا',
+        footer_address: 'العنوان',
+        footer_address_info: 'بغداد - الكرادة - شارع العرصات',
+        footer_copy: 'Copyright 2025 Tarabut. All Rights Reserved'
     },
     en: {
         lang_btn: '🇮🇶 العربية',
@@ -175,6 +179,10 @@ const translations = {
         contact_mobile_label: 'Mobile Number',
         contact_email_label: 'Email',
         contact_address_label: 'Company Address',
-        contact_address_desc: 'Our headquarters is located in Baghdad, Karrada, Al-Arasat Street, and we are working to expand our services to include all of Iraq.'
+        contact_address_desc: 'Our headquarters is located in Baghdad, Karrada, Al-Arasat Street, and we are working to expand our services to include all of Iraq.',
+        footer_call: 'Call Us',
+        footer_address: 'Address',
+        footer_address_info: 'Baghdad - Karrada - Al-Arasat Street',
+        footer_copy: 'Copyright 2025 Tarabut. All Rights Reserved'
     }
 };
