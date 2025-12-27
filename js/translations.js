@@ -41,7 +41,16 @@ const translations = {
         service_8_title: 'إدارة المشاريع',
         service_8_desc: 'إدارة وتخطيط المشاريع الإنشائية والخدمية بدقة.',
         nav_work: 'اعمالنا',
-        work_title: 'اعمالنا'
+        work_title: 'اعمالنا',
+        testimonials_tag: 'كلمة لعملاء ترابط',
+        testimonial_1_title: 'الوطني للإنترنت',
+        testimonial_1_desc: 'قررنا في إدارة الوطني للإنترنت الاعتماد على كوادر شركة ترابط في أن تكون مكاتب العمل لدينا بأعلى مستوى وحرفية وملائمة لأجواء العمل المثالية، وحصل ما كنا نأمله ونتوقعه من كوادر ترابط، حيث تُعد مكاتب عمل الوطني للإنترنت ضمن أفضل مكاتب العمل في السوق العراقية.',
+        testimonial_2_title: 'غلوبل تك',
+        testimonial_2_desc: 'قامت ترابط بتأهيل مبنى شركة غلوبل تك عبر إعمار المبنى وتأسيس المنظومة الكهربائية وتأسيس المرافق الصحية وتصميم داخلي محترف جداً لمكاتب عمل الموظفين وغرف المدراء والاجتماعات ونحن سعيدون بهذا التعامل وهذا الانجاز.',
+        testimonial_3_title: 'السنى',
+        testimonial_3_desc: 'اخترنا أن نؤسس مكاتب شركتنا عبر كوادر ترابط كونها تتبع معايير دولية ومحترفة في أعمالها فضلاً عن اهتمامها برضا العملاء عن الخدمات المقدمة، وتحسين جودتها.',
+        testimonial_4_title: 'ايرثلنك',
+        testimonial_4_desc: 'ما دفعنا للتعاقد مع ترابط لتأهيل أبنية ايرثلنك هو حرصهم على الاستجابة السريعة لظروفنا، كما أثبتوا التزامهم بالتوقيتات والجداول الزمنية المتفق عليها عبر كوادر عراقية 100%.'
     },
     en: {
         lang_btn: '🇮🇶 العربية',
@@ -85,6 +94,15 @@ const translations = {
         service_7_desc: 'Professional security of facilities and individuals.',
         service_8_title: 'Project Management',
         service_8_desc: 'Accurate management and planning for projects.',
-        work_title: 'Our Work'
+        work_title: 'Our Work',
+        testimonials_tag: 'Word from Tarabut Clients',
+        testimonial_1_title: 'National Internet',
+        testimonial_1_desc: "We decided at National Internet management to rely on Tarabut's expertise to ensure our offices are at the highest level of professionalism, and our expectations were fully met. National Internet offices are now considered among the best in the Iraqi market.",
+        testimonial_2_title: 'GlobalTek',
+        testimonial_2_desc: "Tarabut rehabilitated GlobalTek's building by renovating the electrical system, sanitation facilities, and creating a very professional interior design for staff offices and meeting rooms. We are very happy with this cooperation.",
+        testimonial_3_title: 'Sana',
+        testimonial_3_desc: "We chose to establish our company offices through Tarabut because they follow international professional standards, in addition to their focus on customer satisfaction and quality improvement.",
+        testimonial_4_title: 'Earthlink',
+        testimonial_4_desc: "What drove us to contract Tarabut for Earthlink's building rehabilitation was their commitment to rapid response and strict adherence to agreed schedules through 100% Iraqi expertise."
     }
 };

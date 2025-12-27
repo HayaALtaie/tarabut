@@ -832,6 +832,119 @@ section {
   border-radius: 6px;
 }
 
+.testimonials-section {
+  padding: 100px 0;
+  background-color: #1062a5;
+  background-image: url('../assets/images/test-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-header {
+  max-width: 1100px;
+  margin: 0 auto 50px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.testimonials-section .section-tag {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 15px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.testimonials-section .section-tag .dot {
+  background-color: #fff;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}
+
+.quote-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 50px;
+  color: #1062a5;
+  font-size: 24px;
+}
+
+.testimonial-logo {
+  height: 60px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-logo img {
+  max-height: 100%;
+  max-width: 150px;
+  object-fit: contain;
+}
+
+.testimonial-card h3 {
+  color: #1f2c56;
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.testimonial-card p {
+  color: #475569;
+  line-height: 1.8;
+  font-size: 0.95rem;
+  text-align: justify;
+}
+
+[dir="ltr"] .testimonials-header {
+  justify-content: flex-start;
+}
+
+[dir="ltr"] .quote-icon {
+  right: auto;
+  left: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 50px;
+}
+
+@media (max-width: 991px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+}
+
+
 @media (max-width: 1024px) {
   .work-item {
     flex: 0 0 calc((100% - 30px) / 2);
