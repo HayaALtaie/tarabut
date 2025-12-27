@@ -25,7 +25,12 @@
   line-height: 1;
 }
 
+html[dir="ltr"] .logo-area {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
 @media (max-width: 1024px) {
+  /* Header */
   .header-inner {
     height: 90px;
   }
@@ -57,9 +62,156 @@
   .contact-info {
     font-size: 14px;
   }
+
+  /* Hero */
+  .hero {
+    height: 600px;
+    padding-top: 90px;
+  }
+
+  .text-content {
+    padding: 35px;
+    max-width: 600px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-subtitle {
+    font-size: 17px;
+  }
+
+  /* About */
+  .about-us {
+    padding: 80px 0;
+  }
+
+  .about-container {
+    gap: 50px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .image-wrapper img {
+    max-width: 400px;
+    min-height: 450px;
+  }
+
+  .experience-badge {
+    width: 160px;
+    height: 160px;
+    bottom: -35px;
+    left: -35px;
+  }
+
+  .exp-year {
+    font-size: 50px;
+  }
+
+  .exp-text {
+    font-size: 16px;
+  }
+
+  /* Clients Slider */
+  .clients-slider-section {
+    padding: 60px 0;
+  }
+
+  .clients-slider-section .container {
+    padding: 0 30px;
+  }
+
+  .slide-item {
+    width: 180px;
+    height: 110px;
+  }
+
+  .slider-arrow {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  /* Services */
+  .services-section {
+    padding-top: 40px;
+  }
+
+  .services-video-container {
+    max-width: 90%;
+    padding: 0 20px;
+  }
+
+  .video-placeholder img {
+    height: 350px;
+  }
+
+  .play-btn {
+    width: 65px;
+    height: 65px;
+    font-size: 22px;
+    box-shadow: 0 0 0 8px rgba(16, 98, 165, 0.2);
+  }
+
+  .services-content-wrapper {
+    padding: 180px 0 80px;
+    margin-top: -130px;
+  }
+
+  .services-header {
+    margin-bottom: 50px;
+  }
+
+  .services-grid {
+    gap: 20px;
+  }
+
+  .service-card {
+    padding: 35px 20px;
+  }
+
+  .bg-dots-left {
+    width: 100px;
+    height: 80px;
+    left: 3%;
+  }
+
+  .bg-circle-right {
+    width: 120px;
+    height: 120px;
+    border-width: 12px;
+    right: -40px;
+  }
+
+  /* LTR Support */
+  html[dir="ltr"] .about-container {
+    flex-direction: row-reverse;
+  }
+
+  html[dir="ltr"] .about-text {
+    text-align: left;
+  }
+
+  html[dir="ltr"] .section-tag {
+    justify-content: flex-start;
+  }
+
+  html[dir="ltr"] .experience-badge {
+    left: auto;
+    right: -35px;
+  }
+
+  html[dir="ltr"] .blue-circle-top {
+    right: auto;
+    left: -50px;
+  }
 }
 
 @media (max-width: 768px) {
+  /* Header */
   .header-inner {
     height: 80px;
     flex-wrap: wrap;
@@ -150,116 +302,7 @@
     font-size: 13px;
   }
 
-  .hero {
-    padding-top: 130px;
-  }
-}
-
-@media (max-width: 480px) {
-  .header-inner {
-    height: 70px;
-  }
-
-  .logo-area {
-    padding: 0 20px;
-  }
-
-  .logo-shape img {
-    max-width: 110px;
-  }
-
-  .main-nav {
-    top: 70px;
-  }
-
-  .top-bar {
-    height: 45px;
-    padding: 0 15px;
-  }
-
-  .contact-info {
-    font-size: 12px;
-    gap: 8px;
-  }
-
-  .contact-info span {
-    display: none;
-  }
-
-  .phone-icon-circle {
-    width: 22px;
-    height: 22px;
-    font-size: 12px;
-  }
-
-  .hero {
-    padding-top: 115px;
-  }
-
-  .lang-btn {
-    bottom: 20px;
-    right: 20px;
-    padding: 8px 16px;
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 360px) {
-  .logo-shape img {
-    max-width: 90px;
-  }
-
-  .mobile-menu-toggle {
-    font-size: 24px;
-    padding: 8px;
-    margin-left: 10px;
-  }
-
-  .top-bar {
-    padding: 0 10px;
-  }
-}
-
-html[dir="ltr"] .logo-area {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-
-@media (max-width: 768px) {
-  html[dir="ltr"] .main-nav {
-    margin-left: 0;
-  }
-
-  html[dir="ltr"] .logo-shape {
-    justify-content: flex-start;
-  }
-
-  html[dir="ltr"] .mobile-menu-toggle {
-    margin-left: 0;
-    margin-right: 20px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .hero {
-    height: 600px;
-    padding-top: 90px;
-  }
-
-  .text-content {
-    padding: 35px;
-    max-width: 600px;
-  }
-
-  .hero-title {
-    font-size: 32px;
-  }
-
-  .hero-subtitle {
-    font-size: 17px;
-  }
-}
-
-@media (max-width: 768px) {
+  /* Hero */
   .hero {
     height: 550px;
     padding-top: 130px;
@@ -283,88 +326,8 @@ html[dir="ltr"] .logo-area {
     font-size: 16px;
     margin-bottom: 15px;
   }
-}
 
-@media (max-width: 480px) {
-  .hero {
-    height: 500px;
-    padding-top: 115px;
-  }
-
-  .hero-content {
-    padding: 0 15px;
-  }
-
-  .text-content {
-    padding: 25px 20px;
-  }
-
-  .hero-title {
-    font-size: 22px;
-    line-height: 1.3;
-    margin-bottom: 20px;
-  }
-
-  .hero-subtitle {
-    font-size: 14px;
-    margin-bottom: 12px;
-  }
-
-  .hero-subtitle::after {
-    width: 30px;
-  }
-}
-
-@media (max-width: 360px) {
-  .hero {
-    height: 450px;
-    padding-top: 115px;
-  }
-
-  .text-content {
-    padding: 20px 15px;
-  }
-
-  .hero-title {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .about-us {
-    padding: 80px 0;
-  }
-
-  .about-container {
-    gap: 50px;
-  }
-
-  .section-title {
-    font-size: 36px;
-  }
-
-  .image-wrapper img {
-    max-width: 400px;
-    min-height: 450px;
-  }
-
-  .experience-badge {
-    width: 160px;
-    height: 160px;
-    bottom: -35px;
-    left: -35px;
-  }
-
-  .exp-year {
-    font-size: 50px;
-  }
-
-  .exp-text {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 768px) {
+  /* About */
   .about-us {
     padding: 60px 0;
   }
@@ -427,9 +390,288 @@ html[dir="ltr"] .logo-area {
     top: 50px;
     right: -40px;
   }
+
+  /* Clients Slider */
+  .clients-slider-section {
+    padding: 50px 0;
+  }
+
+  .clients-slider-section .container {
+    padding: 0 20px;
+  }
+
+  .slider-wrapper {
+    gap: 15px;
+  }
+
+  .slide-item {
+    width: 160px;
+    height: 100px;
+    padding: 15px;
+  }
+
+  .slider-track {
+    gap: 25px;
+  }
+
+  .slider-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .slider-dots {
+    margin-top: 25px;
+    gap: 8px;
+  }
+
+  .slider-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .slider-dot.active {
+    width: 25px;
+  }
+
+  /* Services */
+  .services-section {
+    padding-top: 30px;
+  }
+
+  .services-video-container {
+    max-width: 95%;
+    padding: 0 15px;
+  }
+
+  .video-placeholder {
+    border-radius: 15px;
+  }
+
+  .video-placeholder img {
+    height: 300px;
+    border-radius: 15px;
+  }
+
+  .play-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    box-shadow: 0 0 0 6px rgba(16, 98, 165, 0.2);
+  }
+
+  .video-dots-top {
+    top: -15px;
+    right: -20px;
+    width: 60px;
+    height: 45px;
+    background-size: 12px 12px;
+  }
+
+  .video-circle-left {
+    top: 15px;
+    left: -20px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .video-blue-dot-bottom {
+    bottom: -12px;
+    right: 30px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .services-content-wrapper {
+    padding: 150px 0 60px;
+    margin-top: -100px;
+  }
+
+  .services-header {
+    margin-bottom: 40px;
+  }
+
+  .services-header .section-title {
+    font-size: 32px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .service-card {
+    padding: 30px 20px;
+  }
+
+  .service-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+
+  .service-card h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
+  .service-card p {
+    font-size: 13px;
+  }
+
+  .bg-dots-left {
+    width: 80px;
+    height: 60px;
+    left: 2%;
+    top: 35%;
+  }
+
+  .bg-circle-right {
+    width: 100px;
+    height: 100px;
+    border-width: 10px;
+    right: -30px;
+  }
+
+  /* LTR Support */
+  html[dir="ltr"] .main-nav {
+    margin-left: 0;
+  }
+
+  html[dir="ltr"] .logo-shape {
+    justify-content: flex-start;
+  }
+
+  html[dir="ltr"] .mobile-menu-toggle {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+
+  html[dir="ltr"] .about-text {
+    text-align: center;
+  }
+
+  html[dir="ltr"] .section-tag {
+    justify-content: center;
+  }
+
+  html[dir="ltr"] .experience-badge {
+    left: auto;
+    right: -30px;
+  }
+
+  html[dir="ltr"] .blue-circle-top {
+    right: auto;
+    left: -40px;
+  }
+
+  html[dir="ltr"] .video-dots-top {
+    right: auto;
+    left: -20px;
+  }
+
+  html[dir="ltr"] .video-circle-left {
+    left: auto;
+    right: -20px;
+  }
+
+  html[dir="ltr"] .video-blue-dot-bottom {
+    right: auto;
+    left: 30px;
+  }
+
+  html[dir="ltr"] .bg-dots-left {
+    left: auto;
+    right: 2%;
+  }
+
+  html[dir="ltr"] .bg-circle-right {
+    right: auto;
+    left: -30px;
+  }
+
+  html[dir="ltr"] .about-container {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 480px) {
+  /* Header */
+  .header-inner {
+    height: 70px;
+  }
+
+  .logo-area {
+    padding: 0 20px;
+  }
+
+  .logo-shape img {
+    max-width: 110px;
+  }
+
+  .main-nav {
+    top: 70px;
+  }
+
+  .top-bar {
+    height: 45px;
+    padding: 0 15px;
+  }
+
+  .contact-info {
+    font-size: 12px;
+    gap: 8px;
+  }
+
+  .contact-info span {
+    display: none;
+  }
+
+  .phone-icon-circle {
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+  }
+
+  /* Hero */
+  .hero {
+    height: 500px;
+    padding-top: 115px;
+  }
+
+  .hero-content {
+    padding: 0 15px;
+  }
+
+  .text-content {
+    padding: 25px 20px;
+  }
+
+  .hero-title {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .hero-subtitle::after {
+    width: 30px;
+  }
+
+  .lang-btn {
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  /* About */
   .about-us {
     padding: 50px 0;
   }
@@ -488,9 +730,204 @@ html[dir="ltr"] .logo-area {
     top: 40px;
     right: -30px;
   }
+
+  /* Clients Slider */
+  .clients-slider-section {
+    padding: 40px 0;
+  }
+
+  .clients-slider-section .container {
+    padding: 0 15px;
+  }
+
+  .slider-wrapper {
+    gap: 10px;
+  }
+
+  .slide-item {
+    width: 140px;
+    height: 90px;
+    padding: 12px;
+  }
+
+  .slider-track {
+    gap: 15px;
+  }
+
+  .slider-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
+    box-shadow: 0 2px 8px rgba(16, 98, 165, 0.25);
+  }
+
+  .slider-dots {
+    margin-top: 20px;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .slider-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .slider-dot.active {
+    width: 20px;
+  }
+
+  /* Services */
+  .services-section {
+    padding-top: 25px;
+  }
+
+  .services-video-container {
+    padding: 0 10px;
+  }
+
+  .video-placeholder img {
+    height: 250px;
+  }
+
+  .play-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    box-shadow: 0 0 0 5px rgba(16, 98, 165, 0.2);
+  }
+
+  .video-dots-top {
+    top: -10px;
+    right: -15px;
+    width: 50px;
+    height: 35px;
+  }
+
+  .video-circle-left {
+    top: 10px;
+    left: -15px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .video-blue-dot-bottom {
+    bottom: -10px;
+    right: 20px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .services-content-wrapper {
+    padding: 120px 0 50px;
+    margin-top: -80px;
+  }
+
+  .services-header {
+    margin-bottom: 30px;
+  }
+
+  .services-header .section-title {
+    font-size: 28px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 0 15px;
+  }
+
+  .service-card {
+    padding: 25px 20px;
+  }
+
+  .service-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .service-card h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .service-card p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .bg-dots-left {
+    width: 60px;
+    height: 50px;
+    left: 1%;
+    top: 30%;
+  }
+
+  .bg-circle-right {
+    width: 80px;
+    height: 80px;
+    border-width: 8px;
+    right: -25px;
+  }
+
+  /* LTR Support */
+  html[dir="ltr"] .experience-badge {
+    right: -25px;
+  }
+
+  html[dir="ltr"] .blue-circle-top {
+    left: -30px;
+  }
+
+  html[dir="ltr"] .video-dots-top {
+    left: -15px;
+  }
+
+  html[dir="ltr"] .video-circle-left {
+    right: -15px;
+  }
+
+  html[dir="ltr"] .video-blue-dot-bottom {
+    left: 20px;
+  }
+
+  html[dir="ltr"] .bg-circle-right {
+    left: -25px;
+  }
 }
 
 @media (max-width: 360px) {
+  /* Header */
+  .logo-shape img {
+    max-width: 90px;
+  }
+
+  .mobile-menu-toggle {
+    font-size: 24px;
+    padding: 8px;
+    margin-left: 10px;
+  }
+
+  .top-bar {
+    padding: 0 10px;
+  }
+
+  /* Hero */
+  .hero {
+    height: 450px;
+    padding-top: 115px;
+  }
+
+  .text-content {
+    padding: 20px 15px;
+  }
+
+  .hero-title {
+    font-size: 20px;
+  }
+
+  /* About */
   .about-us {
     padding: 40px 0;
   }
@@ -521,34 +958,75 @@ html[dir="ltr"] .logo-area {
   .exp-text {
     font-size: 11px;
   }
-}
 
-@media (max-width: 768px) {
-  html[dir="ltr"] .about-text {
-    text-align: center;
+  /* Clients Slider */
+  .slide-item {
+    width: 120px;
+    height: 80px;
+    padding: 10px;
   }
 
-  html[dir="ltr"] .section-tag {
-    justify-content: center;
+  .slider-arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 11px;
   }
 
+  .slider-track {
+    gap: 12px;
+  }
+
+  /* Services */
+  .video-placeholder img {
+    height: 220px;
+  }
+
+  .play-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .services-content-wrapper {
+    padding: 100px 0 40px;
+    margin-top: -70px;
+  }
+
+  .services-header .section-title {
+    font-size: 24px;
+  }
+
+  .services-grid {
+    padding: 0 10px;
+    gap: 15px;
+  }
+
+  .service-card {
+    padding: 20px 15px;
+  }
+
+  .service-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .service-card h3 {
+    font-size: 15px;
+  }
+
+  .service-card p {
+    font-size: 12px;
+  }
+
+  /* LTR Support */
   html[dir="ltr"] .experience-badge {
     left: auto;
-    right: -30px;
+    right: -20px;
   }
 
   html[dir="ltr"] .blue-circle-top {
     right: auto;
-    left: -40px;
-  }
-}
-
-@media (max-width: 480px) {
-  html[dir="ltr"] .experience-badge {
-    right: -25px;
-  }
-
-  html[dir="ltr"] .blue-circle-top {
-    left: -30px;
+    left: -50px;
   }
 }
