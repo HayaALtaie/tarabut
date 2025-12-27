@@ -30,6 +30,7 @@ html[dir="ltr"] .logo-area {
 }
 
 @media (max-width: 1024px) {
+
   /* Header */
   .header-inner {
     height: 90px;
@@ -195,9 +196,6 @@ html[dir="ltr"] .logo-area {
     text-align: left;
   }
 
-  html[dir="ltr"] .section-tag {
-    justify-content: flex-start;
-  }
 
   html[dir="ltr"] .experience-badge {
     left: auto;
@@ -211,6 +209,7 @@ html[dir="ltr"] .logo-area {
 }
 
 @media (max-width: 768px) {
+
   /* Header */
   .header-inner {
     height: 80px;
@@ -603,6 +602,7 @@ html[dir="ltr"] .logo-area {
 }
 
 @media (max-width: 480px) {
+
   /* Header */
   .header-inner {
     height: 70px;
@@ -903,6 +903,7 @@ html[dir="ltr"] .logo-area {
 }
 
 @media (max-width: 360px) {
+
   /* Header */
   .logo-shape img {
     max-width: 90px;

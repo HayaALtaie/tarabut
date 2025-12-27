@@ -1,11 +1,12 @@
 html[dir="ltr"] .logo-area {
     padding: 0 60px;
-    clip-path: polygon(0 0, 100% 0, calc(100% - 60px) 100%, 0 100%);
+    clip-path: polygon(0 0, calc(100% - 60px) 0, 100% 100%, 0 100%);
 }
 
 html[dir="ltr"] .main-nav {
     margin-right: 0;
     margin-left: -60px;
+    padding-left: 100px;
 }
 
 html[dir="ltr"] .contact-info {
@@ -51,7 +52,6 @@ html[dir="ltr"] .blue-circle-top {
     left: -50px;
 }
 
-html[dir="ltr"] .about-image {}
 
 html[dir="ltr"] .about-text {
     text-align: left;
@@ -65,9 +65,9 @@ html[dir="ltr"] .about-text {
     text-align: left;
 }
 
-html[dir="ltr"] .section-tag {
+/* html[dir="ltr"] .section-tag {
     justify-content: flex-start;
-}
+} */
 
 html[dir="ltr"] .contact-number {
     direction: ltr;
