@@ -39,7 +39,9 @@ const translations = {
         service_7_title: 'حماية المنشآت',
         service_7_desc: 'خدمات أمن وحماية المنشآت والأفراد باحترافية.',
         service_8_title: 'إدارة المشاريع',
-        service_8_desc: 'إدارة وتخطيط المشاريع الإنشائية والخدمية بدقة.'
+        service_8_desc: 'إدارة وتخطيط المشاريع الإنشائية والخدمية بدقة.',
+        nav_work: 'اعمالنا',
+        work_title: 'اعمالنا'
     },
     en: {
         lang_btn: '🇮🇶 العربية',
@@ -48,6 +50,7 @@ const translations = {
         nav_services: 'Services',
         nav_news: 'News',
         nav_clients: 'Our Clients',
+        nav_work: 'Our Work',
         nav_contact: 'Contact Us',
         hero_subtitle: 'We work on',
         hero_title: 'Facility Rehabilitation & Maintenance <br> Hospitality, Cleaning & Accommodation <br> Facility Security Services <br> & Staffing',
@@ -81,6 +84,7 @@ const translations = {
         service_7_title: 'Facility Protection',
         service_7_desc: 'Professional security of facilities and individuals.',
         service_8_title: 'Project Management',
-        service_8_desc: 'Accurate management and planning for projects.'
+        service_8_desc: 'Accurate management and planning for projects.',
+        work_title: 'Our Work'
     }
 };

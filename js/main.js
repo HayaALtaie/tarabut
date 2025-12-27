@@ -206,12 +206,115 @@ document.addEventListener('DOMContentLoaded', () => {
         goToSlide(0, false);
         startAutoSlide();
 
+        window.updateSliderPosition = () => {
+            goToSlide(currentIndex % slideCount, false);
+        };
+
         let resizeTimeout;
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimeout);
             resizeTimeout = setTimeout(() => {
-                goToSlide(currentIndex % slideCount, false);
+                updateSliderPosition();
             }, 250);
         });
     }
+
+    // Work Slider Logic
+    const workSliderTrack = document.getElementById('workSliderTrack');
+    const workPrevBtn = document.getElementById('workPrev');
+    const workNextBtn = document.getElementById('workNext');
+    const workDotsContainer = document.getElementById('workDots');
+
+    if (workSliderTrack) {
+        let workIndex = 0;
+        const workSlides = Array.from(workSliderTrack.children);
+        const workSlideCount = workSlides.length;
+
+        function getVisibleWorkItems() {
+            const width = window.innerWidth;
+            if (width > 1024) return 3;
+            if (width > 640) return 2;
+            return 1;
+        }
+
+        function getWorkSlideWidth() {
+            const containerWidth = workSliderTrack.parentElement.offsetWidth;
+            const gap = 30;
+            const visibleItems = getVisibleWorkItems();
+            return (containerWidth - (gap * (visibleItems - 1))) / visibleItems + gap;
+        }
+
+        function createWorkDots() {
+            if (!workDotsContainer) return;
+            workDotsContainer.innerHTML = '';
+            const visibleItems = getVisibleWorkItems();
+            const dotCount = workSlideCount - visibleItems + 1;
+            for (let i = 0; i < dotCount; i++) {
+                const dot = document.createElement('button');
+                dot.classList.add('work-dot');
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToWorkSlide(i));
+                workDotsContainer.appendChild(dot);
+            }
+        }
+
+        function updateWorkDots() {
+            if (!workDotsContainer) return;
+            const dots = workDotsContainer.querySelectorAll('.work-dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === workIndex);
+            });
+        }
+
+        function goToWorkSlide(index) {
+            const visibleItems = getVisibleWorkItems();
+            const maxIndex = workSlideCount - visibleItems;
+            workIndex = Math.max(0, Math.min(index, maxIndex));
+
+            const slideWidth = getWorkSlideWidth();
+            const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
+            const offset = isRTL ? workIndex * slideWidth : -workIndex * slideWidth;
+
+            workSliderTrack.style.transform = `translateX(${offset}px)`;
+            updateWorkDots();
+        }
+
+        if (workNextBtn) {
+            workNextBtn.addEventListener('click', () => {
+                const visibleItems = getVisibleWorkItems();
+                if (workIndex < workSlideCount - visibleItems) {
+                    goToWorkSlide(workIndex + 1);
+                } else {
+                    goToWorkSlide(0);
+                }
+            });
+        }
+
+        if (workPrevBtn) {
+            workPrevBtn.addEventListener('click', () => {
+                const visibleItems = getVisibleWorkItems();
+                if (workIndex > 0) {
+                    goToWorkSlide(workIndex - 1);
+                } else {
+                    goToWorkSlide(workSlideCount - visibleItems);
+                }
+            });
+        }
+
+        window.updateWorkPosition = () => {
+            createWorkDots();
+            goToWorkSlide(workIndex);
+        };
+
+        createWorkDots();
+        window.addEventListener('resize', updateWorkPosition);
+    }
+
+    // Update setLanguage to include alignment fixes
+    const originalSetLanguage = setLanguage;
+    setLanguage = function (lang) {
+        originalSetLanguage(lang);
+        if (typeof updateSliderPosition === 'function') updateSliderPosition();
+        if (typeof updateWorkPosition === 'function') updateWorkPosition();
+    };
 });

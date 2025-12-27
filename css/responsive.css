@@ -26,7 +26,7 @@
 }
 
 html[dir="ltr"] .logo-area {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, calc(100% - 60px) 100%, 0 100%);
 }
 
 @media (max-width: 1024px) {
@@ -537,7 +537,12 @@ html[dir="ltr"] .logo-area {
 
   /* LTR Support */
   html[dir="ltr"] .main-nav {
-    margin-left: 0;
+    margin-left: -60px;
+    margin-right: 0;
+  }
+
+  html[dir="ltr"] .logo-area {
+    clip-path: polygon(0 0, 100% 0, calc(100% - 60px) 100%, 0 100%);
   }
 
   html[dir="ltr"] .logo-shape {
