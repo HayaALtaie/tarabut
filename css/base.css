@@ -1,0 +1,83 @@
+/* ==========================================
+   Base Styles & Reset
+   ========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+section {
+  overflow: hidden;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--spacing-2xl);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Language Toggle Button */
+.lang-btn {
+  position: fixed;
+  bottom: var(--spacing-lg);
+  right: var(--spacing-lg);
+  background-color: var(--primary-blue);
+  color: var(--white);
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-3xl);
+  font-weight: var(--font-bold);
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-fast) var(--transition-ease);
+}
+
+.lang-btn:hover {
+  background-color: var(--primary-blue-dark);
+  transform: translateY(-2px);
+}
+
+/* Common Section Styles */
+.section-tag {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.section-tag .dot {
+  width: var(--spacing-sm);
+  height: var(--spacing-sm);
+  background-color: var(--primary-blue);
+  border-radius: var(--radius-full);
+}
+
+.section-tag span:last-child {
+  color: var(--primary-blue);
+  font-weight: var(--font-bold);
+  font-size: var(--font-lg);
+}
+
+.section-title {
+  font-size: var(--font-5xl);
+  font-weight: var(--font-black);
+  color: var(--dark-blue);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.2;
+}
+

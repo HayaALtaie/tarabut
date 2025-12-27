@@ -1,0 +1,202 @@
+/* ==========================================
+   Services Section Component
+   ========================================== */
+
+.services-section {
+  position: relative;
+  background-color: var(--light-gray);
+  padding-top: var(--spacing-2xl);
+}
+
+.services-video-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.video-placeholder {
+  position: relative;
+  border-radius: var(--radius-2xl);
+  overflow: visible;
+  box-shadow: var(--shadow-4xl);
+}
+
+.video-placeholder img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: var(--radius-2xl);
+  display: block;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  background-color: var(--primary-blue);
+  color: var(--white);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-2xl);
+  cursor: pointer;
+  box-shadow: 0 0 0 var(--spacing-sm) rgba(16, 98, 165, 0.2);
+  transition: all var(--transition-fast) var(--transition-ease);
+}
+
+.play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  background-color: var(--primary-blue-dark);
+}
+
+.video-dots-top {
+  position: absolute;
+  top: -20px;
+  right: -30px;
+  width: 80px;
+  height: var(--spacing-3xl);
+  background-image: radial-gradient(var(--primary-blue) 2px, transparent 2px);
+  background-size: 15px 15px;
+  z-index: -1;
+}
+
+.video-circle-left {
+  position: absolute;
+  top: var(--spacing-md);
+  left: -30px;
+  width: var(--spacing-3xl);
+  height: var(--spacing-3xl);
+  border: 2px solid var(--primary-blue);
+  border-radius: var(--radius-full);
+  z-index: -1;
+}
+
+.video-blue-dot-bottom {
+  position: absolute;
+  bottom: -15px;
+  right: var(--spacing-2xl);
+  width: 25px;
+  height: 25px;
+  background-color: var(--primary-blue);
+  border-radius: var(--radius-full);
+}
+
+.services-content-wrapper {
+  background-color: var(--dark-blue);
+  padding: 200px 0 var(--spacing-4xl);
+  margin-top: -150px;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
+}
+
+.services-header .section-tag {
+  justify-content: center;
+  color: var(--white);
+}
+
+.services-header .section-tag .dot {
+  background-color: var(--sky-blue);
+}
+
+.services-header .section-title {
+  color: var(--white);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: var(--container-lg);
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.service-card {
+  background-color: var(--white);
+  padding: var(--spacing-xl) 25px;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: all var(--transition-fast) var(--transition-ease);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow-2xl);
+  height: 100%;
+}
+
+.service-card:nth-child(n+5) {
+  grid-column: auto;
+}
+
+.service-icon {
+  width: var(--spacing-3xl);
+  height: var(--spacing-3xl);
+  background-color: var(--light-gray);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-blue);
+  font-size: var(--font-2xl);
+  margin-bottom: var(--spacing-md);
+}
+
+.service-card h3 {
+  font-size: var(--font-xl);
+  color: var(--dark-blue);
+  margin-bottom: 12px;
+  font-weight: var(--font-bold);
+}
+
+.service-card p {
+  font-size: var(--font-base);
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  background-color: var(--primary-blue);
+  color: var(--white);
+}
+
+.service-card:hover .service-icon {
+  background-color: var(--white-20);
+  color: var(--white);
+}
+
+.service-card:hover h3,
+.service-card:hover p {
+  color: var(--white);
+}
+
+.bg-dots-left {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  width: 120px;
+  height: var(--spacing-4xl);
+  background-image: radial-gradient(rgba(79, 172, 254, 0.3) 3px, transparent 3px);
+  background-size: var(--spacing-md) var(--spacing-md);
+}
+
+.bg-circle-right {
+  position: absolute;
+  top: 50%;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  border: 15px solid var(--white-05);
+  border-radius: var(--radius-full);
+}
+

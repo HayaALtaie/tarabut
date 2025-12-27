@@ -2,20 +2,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const langToggle = document.getElementById('lang-toggle');
     const html = document.documentElement;
 
+    /**
+     * تبديل اللغة وتحديث واجهة المستخدم
+     * Switch language and update UI
+     * @param {string} lang - 'ar' for Arabic or 'en' for English
+     */
     function setLanguage(lang) {
         const dir = lang === 'ar' ? 'rtl' : 'ltr';
 
+        // Update HTML attributes
         html.setAttribute('lang', lang);
         html.setAttribute('dir', dir);
 
+        // Save preference
         localStorage.setItem('selectedLang', lang);
 
+        // Update translations if available
         if (typeof translations !== 'undefined') {
             const t = translations[lang];
+
+            // Update text content
             const elements = document.querySelectorAll('[data-i18n]');
             elements.forEach(element => {
                 const key = element.getAttribute('data-i18n');
                 if (t[key]) {
+                    // Use innerHTML for elements that may contain HTML tags like <br>
                     if (element.tagName === 'H1' || element.tagName === 'P' || element.tagName === 'DIV' || element.tagName === 'SPAN') {
                         element.innerHTML = t[key];
                     } else {
@@ -24,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
+            // Update placeholders
             const placeholders = document.querySelectorAll('[data-i18n-placeholder]');
             placeholders.forEach(element => {
                 const key = element.getAttribute('data-i18n-placeholder');
@@ -33,19 +45,23 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        if (typeof goToSlide === 'function') {
-            const currentIdx = typeof currentIndex !== 'undefined' ? currentIndex : 0;
-            goToSlide(currentIdx % (typeof slideCount !== 'undefined' ? slideCount : 1), false);
+        // Refresh slider position if slider exists
+        if (typeof goToSlide === 'function' && typeof currentIndex !== 'undefined' && typeof slideCount !== 'undefined') {
+            goToSlide(currentIndex % slideCount, false);
         }
     }
 
+    // Initialize with saved language or default to Arabic
     const savedLang = localStorage.getItem('selectedLang') || 'ar';
     setLanguage(savedLang);
 
-    // Back to Top Logic
+    // ==========================================
+    // Back to Top Button
+    // ==========================================
     const backToTopBtn = document.getElementById('backToTop');
 
     if (backToTopBtn) {
+        // Show/hide button based on scroll position
         window.addEventListener('scroll', () => {
             if (window.scrollY > 300) {
                 backToTopBtn.style.display = 'flex';
@@ -54,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        // Scroll to top on click
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
@@ -62,6 +79,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ==========================================
+    // Language Toggle
+    // ==========================================
     if (langToggle) {
         langToggle.addEventListener('click', () => {
             const currentLang = html.getAttribute('lang');
@@ -70,13 +90,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ==========================================
+    // Mobile Menu Toggle
+    // ==========================================
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
     const mainNav = document.getElementById('main-nav');
 
     if (mobileMenuToggle && mainNav) {
+        // Toggle menu on button click
         mobileMenuToggle.addEventListener('click', () => {
             mainNav.classList.toggle('active');
             const icon = mobileMenuToggle.querySelector('i');
+
+            // Change icon between bars and times
             if (mainNav.classList.contains('active')) {
                 icon.classList.remove('fa-bars');
                 icon.classList.add('fa-times');
@@ -86,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        // Close menu when clicking on a link
         const navLinks = mainNav.querySelectorAll('a');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -97,6 +124,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ==========================================
+    // Clients Slider (Infinite Loop)
+    // ==========================================
     const sliderTrack = document.getElementById('sliderTrack');
     const sliderContainer = document.getElementById('sliderContainer');
     const prevBtn = document.getElementById('sliderPrev');
@@ -107,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const slides = Array.from(sliderTrack.children);
         const slideCount = slides.length;
 
+        // Clone slides for infinite loop effect
         slides.forEach(slide => {
             const clone = slide.cloneNode(true);
             sliderTrack.appendChild(clone);
@@ -116,6 +147,9 @@ document.addEventListener('DOMContentLoaded', () => {
         let isTransitioning = false;
         let autoSlideInterval;
 
+        /**
+         * Calculate slide width including gap
+         */
         function getSlideWidth() {
             const slideItem = sliderTrack.querySelector('.slide-item');
             const slideStyle = window.getComputedStyle(slideItem);
@@ -124,6 +158,9 @@ document.addEventListener('DOMContentLoaded', () => {
             return slideWidth + gap;
         }
 
+        /**
+         * Create navigation dots
+         */
         function createDots() {
             dotsContainer.innerHTML = '';
             for (let i = 0; i < slideCount; i++) {
@@ -135,6 +172,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
+        /**
+         * Update active dot indicator
+         */
         function updateDots() {
             const dots = dotsContainer.querySelectorAll('.slider-dot');
             if (dots.length === 0) return;
@@ -144,7 +184,11 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Move to specific slide
+        /**
+         * Navigate to specific slide
+         * @param {number} index - Slide index
+         * @param {boolean} smooth - Enable smooth transition
+         */
         function goToSlide(index, smooth = true) {
             currentIndex = index;
             const slideWidth = getSlideWidth();
@@ -161,12 +205,16 @@ document.addEventListener('DOMContentLoaded', () => {
             updateDots();
         }
 
+        /**
+         * Move to next slide
+         */
         function nextSlide() {
             if (isTransitioning) return;
             isTransitioning = true;
             currentIndex++;
             goToSlide(currentIndex);
 
+            // Reset to first slide after reaching the end (infinite loop)
             if (currentIndex >= slideCount) {
                 setTimeout(() => {
                     currentIndex = 0;
@@ -180,10 +228,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
+        /**
+         * Move to previous slide
+         */
         function prevSlide() {
             if (isTransitioning) return;
             isTransitioning = true;
 
+            // Jump to last slide if at the beginning (infinite loop)
             if (currentIndex === 0) {
                 currentIndex = slideCount;
                 goToSlide(currentIndex, false);
@@ -203,6 +255,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
+        /**
+         * Start automatic sliding
+         */
         function startAutoSlide() {
             autoSlideInterval = setInterval(nextSlide, 3000);
         }

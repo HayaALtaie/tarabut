@@ -1,0 +1,109 @@
+/* ==========================================
+   Testimonials Section Component
+   ========================================== */
+
+.testimonials-section {
+  padding: var(--spacing-4xl) 0;
+  background-color: var(--primary-blue);
+  background-image: url('../../assets/images/test-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-header {
+  max-width: var(--container-md);
+  margin: 0 auto var(--spacing-2xl);
+  display: flex;
+  justify-content: flex-start;
+}
+
+.testimonials-section .section-tag {
+  color: var(--white);
+  background: var(--white-10);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--white-20);
+}
+
+.testimonials-section .section-tag .dot {
+  background-color: var(--white);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+  max-width: var(--container-md);
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background-color: var(--white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-xl);
+  position: relative;
+  box-shadow: var(--shadow-3xl);
+  transition: transform var(--transition-fast) var(--transition-ease);
+  overflow: hidden;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}
+
+.quote-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  background-color: var(--light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: var(--spacing-2xl);
+  color: var(--primary-blue);
+  font-size: var(--font-2xl);
+}
+
+.testimonial-logo {
+  height: var(--spacing-3xl);
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-logo img {
+  max-height: 100%;
+  max-width: 150px;
+  object-fit: contain;
+}
+
+.testimonial-card h3 {
+  color: var(--dark-blue);
+  font-size: var(--font-xl);
+  margin-bottom: var(--spacing-md);
+  font-weight: var(--font-extrabold);
+}
+
+.testimonial-card p {
+  color: var(--text-gray);
+  line-height: 1.8;
+  font-size: var(--font-md);
+  text-align: justify;
+}
+
+[dir="ltr"] .testimonials-header {
+  justify-content: flex-start;
+}
+
+[dir="ltr"] .quote-icon {
+  right: auto;
+  left: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: var(--spacing-2xl);
+}
+

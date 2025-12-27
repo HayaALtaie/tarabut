@@ -61,10 +61,6 @@ html[dir="ltr"] .about-container {
     flex-direction: row-reverse;
 }
 
-html[dir="ltr"] .about-text {
-    text-align: left;
-}
-
 /* html[dir="ltr"] .section-tag {
     justify-content: flex-start;
 } */
@@ -75,4 +71,8 @@ html[dir="ltr"] .contact-number {
 
 html[dir="ltr"] .exp-text {
     font-size: 14px;
+}
+
+html[dir="ltr"] .breadcrumbs i {
+    transform: rotate(180deg);
 }
