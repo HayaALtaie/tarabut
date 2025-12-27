@@ -1,0 +1,585 @@
+/* ============================================
+   Responsive Styles
+   ============================================ */
+
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+  display: none;
+  background: #1062a5;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 10px 15px;
+  margin-left: 20px;
+  border-radius: 5px;
+  transition: background 0.3s;
+  min-width: 45px;
+  min-height: 45px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-toggle:hover {
+  background: #0d518c;
+}
+
+.mobile-menu-toggle i {
+  display: block;
+  line-height: 1;
+}
+
+/* ============================================
+   Header Responsive Styles
+   ============================================ */
+
+/* Large Tablets and Small Desktops (1024px and below) */
+@media (max-width: 1024px) {
+  .header-inner {
+    height: 90px;
+  }
+
+  .logo-area {
+    padding: 0 40px;
+  }
+
+  .logo-shape img {
+    max-width: 150px;
+  }
+
+  .main-nav {
+    padding: 0 30px;
+  }
+
+  .main-nav ul {
+    gap: 20px;
+  }
+
+  .main-nav ul li a {
+    font-size: 15px;
+  }
+
+  .top-bar {
+    padding: 0 30px;
+  }
+
+  .contact-info {
+    font-size: 14px;
+  }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .header-inner {
+    height: 80px;
+    flex-wrap: wrap;
+  }
+
+  .logo-area {
+    padding: 0 30px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    position: relative;
+  }
+
+  .logo-shape {
+    width: auto !important;
+    flex: 0 0 auto !important;
+    justify-content: flex-start;
+    max-width: calc(100% - 70px);
+  }
+
+  .logo-shape img {
+    max-width: 130px;
+  }
+
+  .mobile-menu-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background: #1062a5;
+    border-radius: 5px;
+    transition: background 0.3s;
+    min-width: 45px;
+    min-height: 45px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 10;
+  }
+
+  .mobile-menu-toggle:hover {
+    background: #0d518c;
+  }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: rgba(34, 47, 90, 0.98);
+    padding: 20px 0;
+    margin: 0;
+    flex-direction: column;
+    height: auto;
+    z-index: 999;
+  }
+
+  .main-nav.active {
+    display: flex;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    padding: 0 20px;
+  }
+
+  .main-nav ul li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .main-nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    font-size: 16px;
+  }
+
+  .top-bar {
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    margin: 0;
+  }
+
+  .contact-info {
+    font-size: 13px;
+  }
+
+  .hero {
+    padding-top: 130px;
+  }
+}
+
+/* Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+  .header-inner {
+    height: 70px;
+  }
+
+  .logo-area {
+    padding: 0 20px;
+  }
+
+  .logo-shape img {
+    max-width: 110px;
+  }
+
+  .main-nav {
+    top: 70px;
+  }
+
+  .top-bar {
+    height: 45px;
+    padding: 0 15px;
+  }
+
+  .contact-info {
+    font-size: 12px;
+    gap: 8px;
+  }
+
+  .contact-info span {
+    display: none;
+  }
+
+  .phone-icon-circle {
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+  }
+
+  .hero {
+    padding-top: 115px;
+  }
+
+  .lang-btn {
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile Phones (360px and below) */
+@media (max-width: 360px) {
+  .logo-shape img {
+    max-width: 90px;
+  }
+
+  .mobile-menu-toggle {
+    font-size: 24px;
+    padding: 8px;
+    margin-left: 10px;
+  }
+
+  .top-bar {
+    padding: 0 10px;
+  }
+}
+
+/* LTR Support for Header */
+html[dir="ltr"] .logo-area {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+@media (max-width: 768px) {
+  html[dir="ltr"] .main-nav {
+    margin-left: 0;
+  }
+
+  html[dir="ltr"] .logo-shape {
+    justify-content: flex-start;
+  }
+
+  html[dir="ltr"] .mobile-menu-toggle {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+}
+
+/* ============================================
+   Hero Section Responsive Styles
+   ============================================ */
+
+/* Large Tablets and Small Desktops (1024px and below) */
+@media (max-width: 1024px) {
+  .hero {
+    height: 600px;
+    padding-top: 90px;
+  }
+
+  .text-content {
+    padding: 35px;
+    max-width: 600px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-subtitle {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 550px;
+    padding-top: 130px;
+  }
+
+  .hero-content {
+    padding: 0 20px;
+  }
+
+  .text-content {
+    padding: 30px;
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+}
+
+/* Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+  .hero {
+    height: 500px;
+    padding-top: 115px;
+  }
+
+  .hero-content {
+    padding: 0 15px;
+  }
+
+  .text-content {
+    padding: 25px 20px;
+  }
+
+  .hero-title {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .hero-subtitle::after {
+    width: 30px;
+  }
+}
+
+/* Small Mobile Phones (360px and below) */
+@media (max-width: 360px) {
+  .hero {
+    height: 450px;
+    padding-top: 115px;
+  }
+
+  .text-content {
+    padding: 20px 15px;
+  }
+
+  .hero-title {
+    font-size: 20px;
+  }
+}
+
+/* ============================================
+   About Us Section Responsive Styles
+   ============================================ */
+
+/* Large Tablets and Small Desktops (1024px and below) */
+@media (max-width: 1024px) {
+  .about-us {
+    padding: 80px 0;
+  }
+
+  .about-container {
+    gap: 50px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .image-wrapper img {
+    max-width: 400px;
+    min-height: 450px;
+  }
+
+  .experience-badge {
+    width: 160px;
+    height: 160px;
+    bottom: -35px;
+    left: -35px;
+  }
+
+  .exp-year {
+    font-size: 50px;
+  }
+
+  .exp-text {
+    font-size: 16px;
+  }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .about-us {
+    padding: 60px 0;
+  }
+
+  .about-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .about-text {
+    order: 2;
+    text-align: center;
+  }
+
+  .about-image {
+    order: 1;
+  }
+
+  .section-tag {
+    justify-content: center;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .about-description {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .image-wrapper {
+    width: 100%;
+  }
+
+  .image-wrapper img {
+    max-width: 100%;
+    min-height: 400px;
+  }
+
+  .experience-badge {
+    width: 140px;
+    height: 140px;
+    bottom: -30px;
+    left: -30px;
+    border: 8px solid #f1f5f9;
+  }
+
+  .exp-year {
+    font-size: 45px;
+  }
+
+  .exp-text {
+    font-size: 14px;
+  }
+
+  .blue-circle-top {
+    width: 100px;
+    height: 100px;
+    top: 50px;
+    right: -40px;
+  }
+}
+
+/* Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+  .about-us {
+    padding: 50px 0;
+  }
+
+  .about-container {
+    padding: 0 15px;
+    gap: 30px;
+  }
+
+  .section-title {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+
+  .about-description {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .values-title {
+    font-size: 16px;
+  }
+
+  .values-list li {
+    font-size: 14px;
+  }
+
+  .contact-number {
+    font-size: 18px;
+  }
+
+  .image-wrapper img {
+    min-height: 350px;
+  }
+
+  .experience-badge {
+    width: 120px;
+    height: 120px;
+    bottom: -25px;
+    left: -25px;
+    border: 6px solid #f1f5f9;
+  }
+
+  .exp-year {
+    font-size: 38px;
+  }
+
+  .exp-text {
+    font-size: 12px;
+  }
+
+  .blue-circle-top {
+    width: 80px;
+    height: 80px;
+    top: 40px;
+    right: -30px;
+  }
+}
+
+/* Small Mobile Phones (360px and below) */
+@media (max-width: 360px) {
+  .about-us {
+    padding: 40px 0;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .about-description {
+    font-size: 13px;
+  }
+
+  .image-wrapper img {
+    min-height: 300px;
+  }
+
+  .experience-badge {
+    width: 100px;
+    height: 100px;
+    bottom: -20px;
+    left: -20px;
+  }
+
+  .exp-year {
+    font-size: 32px;
+  }
+
+  .exp-text {
+    font-size: 11px;
+  }
+}
+
+/* LTR Support for About Section */
+@media (max-width: 768px) {
+  html[dir="ltr"] .about-text {
+    text-align: center;
+  }
+
+  html[dir="ltr"] .section-tag {
+    justify-content: center;
+  }
+
+  html[dir="ltr"] .experience-badge {
+    left: auto;
+    right: -30px;
+  }
+
+  html[dir="ltr"] .blue-circle-top {
+    right: auto;
+    left: -40px;
+  }
+}
+
+@media (max-width: 480px) {
+  html[dir="ltr"] .experience-badge {
+    right: -25px;
+  }
+
+  html[dir="ltr"] .blue-circle-top {
+    left: -30px;
+  }
+}
+
