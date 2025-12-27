@@ -73,6 +73,22 @@
   background-image: url('../../assets/images/about-banner.jpg');
 }
 
+.services-hero {
+  background-image: url('../../assets/images/service-banner.jpg');
+}
+
+.news-hero {
+  background-image: url('../../assets/images/news-banner.jpg');
+}
+
+.clients-hero {
+  background-image: url('../../assets/images/client-banner.jpg');
+}
+
+.contact-hero {
+  background-image: url('../../assets/images/contact-banner.jpg');
+}
+
 .page-hero {
   height: 500px;
   /* Shorter than home hero */

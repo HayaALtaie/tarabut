@@ -25,6 +25,10 @@
 @import url('components/contact.css');
 @import url('components/features.css');
 @import url('components/values.css');
+@import url('components/page-services.css');
+@import url('components/page-clients.css');
+@import url('components/contact-page.css');
+@import url('components/form-full.css');
 @import url('components/footer.css');
 
 /* Responsive Styles */

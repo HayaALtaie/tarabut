@@ -1,0 +1,71 @@
+/* ==========================================
+   Contact Info Cards Styles
+   ========================================== */
+
+.contact-cards-section {
+    padding: 80px 0;
+    background-color: #fafafa;
+}
+
+.contact-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-3xl);
+}
+
+.contact-info-card {
+    background: var(--white);
+    padding: var(--spacing-4xl) var(--spacing-xl);
+    border: 1px solid #eeeeee;
+    text-align: center;
+    border-radius: var(--radius-lg);
+    transition: var(--transition-normal);
+}
+
+.contact-info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+}
+
+.card-icon-box {
+    width: 80px;
+    height: 80px;
+    background-color: #eef5fb;
+    color: var(--primary-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin: 0 auto var(--spacing-2xl);
+}
+
+.contact-info-card h3 {
+    font-size: var(--font-xl);
+    color: var(--dark-blue);
+    margin-bottom: var(--spacing-md);
+    font-weight: var(--font-bold);
+}
+
+.contact-info-card p {
+    font-size: var(--font-lg);
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .contact-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-cards-section {
+        padding: 60px 0;
+    }
+}
