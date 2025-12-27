@@ -11,6 +11,14 @@
   <link rel="stylesheet" href="css/style-en.css" />
   <link rel="stylesheet" href="css/responsive.css" />
   <title>Tarabut</title>
+  <script>
+    (function () {
+      const savedLang = localStorage.getItem('selectedLang') || 'ar';
+      const dir = savedLang === 'ar' ? 'rtl' : 'ltr';
+      document.documentElement.setAttribute('lang', savedLang);
+      document.documentElement.setAttribute('dir', dir);
+    })();
+  </script>
 </head>
 
 <body>
@@ -100,6 +108,63 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="clients-slider-section">
+    <div class="container">
+      <div class="slider-wrapper">
+        <button class="slider-arrow slider-arrow-prev" id="sliderPrev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="slider-container" id="sliderContainer">
+          <div class="slider-track" id="sliderTrack">
+            <div class="slide-item">
+              <img src="assets/images/logo/logo-Earthlink.png" alt="Earthlink">
+            </div>
+            <div class="slide-item">
+              <img src="assets/images/logo/logo-global.png" alt="GlobalTek">
+            </div>
+            <div class="slide-item">
+              <img src="assets/images/logo/logo-sana.png" alt="Sana Tech">
+            </div>
+            <div class="slide-item">
+              <img src="assets/images/logo/logo-watani.png" alt="Watani">
+            </div>
+            <div class="slide-item">
+              <img src="assets/images/logo/Nu.svg" alt="Nu">
+            </div>
+            <div class="slide-item">
+              <img src="assets/images/logo/Tamata.svg" alt="Tamata">
+            </div>
+            <div class="slide-item">
+              <img src="assets/images/logo/Tash.svg" alt="Tash">
+            </div>
+            <div class="slide-item">
+              <img src="assets/images/logo/Tech.svg" alt="Tech">
+            </div>
+            <div class="slide-item">
+              <img src="assets/images/logo/ta3lem.svg" alt="Ta3lem">
+            </div>
+            <div class="slide-item">
+              <img src="assets/images/logo/taza.svg" alt="Taza">
+            </div>
+            <div class="slide-item">
+              <img src="assets/images/logo/window-world.svg" alt="Window World">
+            </div>
+            <div class="slide-item">
+              <img src="assets/images/logo/earthlink-aca.png" alt="Earthlink Academy">
+            </div>
+          </div>
+        </div>
+
+        <button class="slider-arrow slider-arrow-next" id="sliderNext">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="slider-dots" id="sliderDots"></div>
     </div>
   </section>
 

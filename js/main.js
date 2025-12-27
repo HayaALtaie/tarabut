@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (typeof translations !== 'undefined') {
             const t = translations[lang];
-
-            document.querySelectorAll('[data-i18n]').forEach(element => {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(element => {
                 const key = element.getAttribute('data-i18n');
                 if (t[key]) {
                     if (element.tagName === 'H1' || element.tagName === 'P' || element.tagName === 'DIV' || element.tagName === 'SPAN') {
@@ -23,6 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             });
+        }
+
+        if (typeof goToSlide === 'function') {
+            const currentIdx = typeof currentIndex !== 'undefined' ? currentIndex : 0;
+            goToSlide(currentIdx % (typeof slideCount !== 'undefined' ? slideCount : 1), false);
         }
     }
 
@@ -37,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Mobile menu toggle
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
     const mainNav = document.getElementById('main-nav');
 
@@ -54,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Close menu when clicking on a link
         const navLinks = mainNav.querySelectorAll('a');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -66,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Clients Slider
     const sliderTrack = document.getElementById('sliderTrack');
     const sliderContainer = document.getElementById('sliderContainer');
     const prevBtn = document.getElementById('sliderPrev');
@@ -77,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const slides = Array.from(sliderTrack.children);
         const slideCount = slides.length;
 
-        // Clone slides for infinite loop effect
         slides.forEach(slide => {
             const clone = slide.cloneNode(true);
             sliderTrack.appendChild(clone);
@@ -87,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let isTransitioning = false;
         let autoSlideInterval;
 
-        // Calculate slide width including gap
         function getSlideWidth() {
             const slideItem = sliderTrack.querySelector('.slide-item');
             const slideStyle = window.getComputedStyle(slideItem);
@@ -96,7 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return slideWidth + gap;
         }
 
-        // Create dots
         function createDots() {
             dotsContainer.innerHTML = '';
             for (let i = 0; i < slideCount; i++) {
@@ -108,21 +107,21 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Update dots
         function updateDots() {
             const dots = dotsContainer.querySelectorAll('.slider-dot');
+            if (dots.length === 0) return;
+            const activeDotIndex = ((currentIndex % slideCount) + slideCount) % slideCount;
             dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentIndex % slideCount);
+                dot.classList.toggle('active', index === activeDotIndex);
             });
         }
 
         // Move to specific slide
         function goToSlide(index, smooth = true) {
-            if (isTransitioning) return;
-
             currentIndex = index;
             const slideWidth = getSlideWidth();
-            const offset = -currentIndex * slideWidth;
+            const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
+            const offset = isRTL ? currentIndex * slideWidth : -currentIndex * slideWidth;
 
             if (smooth) {
                 sliderTrack.style.transition = 'transform 0.5s ease-in-out';
@@ -134,16 +133,12 @@ document.addEventListener('DOMContentLoaded', () => {
             updateDots();
         }
 
-        // Next slide
         function nextSlide() {
             if (isTransitioning) return;
-
             isTransitioning = true;
             currentIndex++;
-
             goToSlide(currentIndex);
 
-            // Reset to first slide when reaching clones
             if (currentIndex >= slideCount) {
                 setTimeout(() => {
                     currentIndex = 0;
@@ -157,10 +152,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Previous slide
         function prevSlide() {
             if (isTransitioning) return;
-
             isTransitioning = true;
 
             if (currentIndex === 0) {
@@ -182,7 +175,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Auto slide
         function startAutoSlide() {
             autoSlideInterval = setInterval(nextSlide, 3000);
         }
@@ -191,7 +183,6 @@ document.addEventListener('DOMContentLoaded', () => {
             clearInterval(autoSlideInterval);
         }
 
-        // Event listeners
         if (nextBtn) {
             nextBtn.addEventListener('click', () => {
                 stopAutoSlide();
@@ -208,16 +199,13 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Pause on hover
         sliderContainer.addEventListener('mouseenter', stopAutoSlide);
         sliderContainer.addEventListener('mouseleave', startAutoSlide);
 
-        // Initialize
         createDots();
         goToSlide(0, false);
         startAutoSlide();
 
-        // Handle window resize
         let resizeTimeout;
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimeout);

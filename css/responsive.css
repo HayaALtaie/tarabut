@@ -1,8 +1,3 @@
-/* ============================================
-   Responsive Styles
-   ============================================ */
-
-/* Mobile Menu Toggle Button */
 .mobile-menu-toggle {
   display: none;
   background: #1062a5;
@@ -30,11 +25,6 @@
   line-height: 1;
 }
 
-/* ============================================
-   Header Responsive Styles
-   ============================================ */
-
-/* Large Tablets and Small Desktops (1024px and below) */
 @media (max-width: 1024px) {
   .header-inner {
     height: 90px;
@@ -69,7 +59,6 @@
   }
 }
 
-/* Tablets (768px and below) */
 @media (max-width: 768px) {
   .header-inner {
     height: 80px;
@@ -166,7 +155,6 @@
   }
 }
 
-/* Mobile Phones (480px and below) */
 @media (max-width: 480px) {
   .header-inner {
     height: 70px;
@@ -216,7 +204,6 @@
   }
 }
 
-/* Small Mobile Phones (360px and below) */
 @media (max-width: 360px) {
   .logo-shape img {
     max-width: 90px;
@@ -233,7 +220,6 @@
   }
 }
 
-/* LTR Support for Header */
 html[dir="ltr"] .logo-area {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
@@ -253,11 +239,6 @@ html[dir="ltr"] .logo-area {
   }
 }
 
-/* ============================================
-   Hero Section Responsive Styles
-   ============================================ */
-
-/* Large Tablets and Small Desktops (1024px and below) */
 @media (max-width: 1024px) {
   .hero {
     height: 600px;
@@ -304,7 +285,6 @@ html[dir="ltr"] .logo-area {
   }
 }
 
-/* Mobile Phones (480px and below) */
 @media (max-width: 480px) {
   .hero {
     height: 500px;
@@ -335,7 +315,6 @@ html[dir="ltr"] .logo-area {
   }
 }
 
-/* Small Mobile Phones (360px and below) */
 @media (max-width: 360px) {
   .hero {
     height: 450px;
@@ -351,11 +330,6 @@ html[dir="ltr"] .logo-area {
   }
 }
 
-/* ============================================
-   About Us Section Responsive Styles
-   ============================================ */
-
-/* Large Tablets and Small Desktops (1024px and below) */
 @media (max-width: 1024px) {
   .about-us {
     padding: 80px 0;
@@ -390,7 +364,6 @@ html[dir="ltr"] .logo-area {
   }
 }
 
-/* Tablets (768px and below) */
 @media (max-width: 768px) {
   .about-us {
     padding: 60px 0;
@@ -456,7 +429,6 @@ html[dir="ltr"] .logo-area {
   }
 }
 
-/* Mobile Phones (480px and below) */
 @media (max-width: 480px) {
   .about-us {
     padding: 50px 0;
@@ -478,7 +450,7 @@ html[dir="ltr"] .logo-area {
     margin-bottom: 15px;
   }
 
-  .values-title {
+  .about-values-title {
     font-size: 16px;
   }
 
@@ -518,7 +490,6 @@ html[dir="ltr"] .logo-area {
   }
 }
 
-/* Small Mobile Phones (360px and below) */
 @media (max-width: 360px) {
   .about-us {
     padding: 40px 0;
@@ -552,7 +523,6 @@ html[dir="ltr"] .logo-area {
   }
 }
 
-/* LTR Support for About Section */
 @media (max-width: 768px) {
   html[dir="ltr"] .about-text {
     text-align: center;
@@ -582,4 +552,3 @@ html[dir="ltr"] .logo-area {
     left: -30px;
   }
 }
-

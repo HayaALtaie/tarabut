@@ -361,7 +361,6 @@ body {
   z-index: -1;
 }
 
-/* Clients Slider Section */
 .clients-slider-section {
   padding: 80px 0;
   background-color: #fff;
@@ -418,14 +417,13 @@ body {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.7;
+  filter: none;
+  opacity: 1;
   transition: all 0.3s ease;
 }
 
 .slide-item:hover img {
-  filter: grayscale(0%);
-  opacity: 1;
+  transform: scale(1.05);
 }
 
 .slider-arrow {
@@ -485,4 +483,12 @@ body {
 
 .slider-dot:hover {
   background-color: #9ca3af;
+}
+
+[dir="rtl"] .slider-arrow-prev i {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .slider-arrow-next i {
+  transform: scaleX(-1);
 }
