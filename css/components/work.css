@@ -1,8 +1,4 @@
-﻿/* ==========================================
-   Work Section Component
-   Portfolio/Projects Slider
-   ========================================== */
-
+﻿
 .work-section {
   padding: var(--spacing-4xl) 0;
   background-color: var(--white);
@@ -59,7 +55,6 @@
   transform: scale(1.1);
 }
 
-/* Slider Navigation Arrows */
 .work-slider-arrow {
   width: var(--spacing-2xl);
   height: var(--spacing-2xl);
@@ -94,7 +89,6 @@
   right: 0;
 }
 
-/* Slider Dots Pagination */
 .work-slider-dots {
   display: flex;
   justify-content: center;
@@ -123,7 +117,6 @@
   border-radius: 6px;
 }
 
-/* RTL Support */
 [dir="rtl"] .work-prev {
   left: auto;
   right: 0;

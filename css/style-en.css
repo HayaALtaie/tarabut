@@ -61,9 +61,6 @@ html[dir="ltr"] .about-container {
     flex-direction: row-reverse;
 }
 
-/* html[dir="ltr"] .section-tag {
-    justify-content: flex-start;
-} */
 
 html[dir="ltr"] .contact-number {
     direction: ltr;

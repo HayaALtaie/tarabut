@@ -24,7 +24,6 @@
     width: 100%;
     height: 100%;
     background-color: rgba(16, 45, 95, 0.92);
-    /* Deep dark blue overlay */
     z-index: 1;
 }
 
@@ -159,7 +158,6 @@
     filter: brightness(1.1);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .contact-full-section {
         padding: 60px 0;

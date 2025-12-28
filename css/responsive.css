@@ -287,17 +287,12 @@ html[dir="ltr"] .logo-area {
   }
 }
 
-/* ========================================== */
-/* Media Query: 768px */
-/* ========================================== */
 @media (max-width: 768px) {
 
-  /* Services Grid */
   .services-grid {
     grid-template-columns: 1fr;
   }
 
-  /* Header */
   .header-inner {
     height: 80px;
     flex-wrap: wrap;
@@ -388,7 +383,6 @@ html[dir="ltr"] .logo-area {
     font-size: 13px;
   }
 
-  /* Hero */
   .hero {
     height: 550px;
     padding-top: 130px;
@@ -432,7 +426,6 @@ html[dir="ltr"] .logo-area {
     margin-bottom: 15px;
   }
 
-  /* About */
   .about-us {
     padding: 60px 0;
   }
@@ -496,7 +489,6 @@ html[dir="ltr"] .logo-area {
     right: -40px;
   }
 
-  /* Clients Slider */
   .clients-slider-section {
     padding: 50px 0;
   }
@@ -539,7 +531,6 @@ html[dir="ltr"] .logo-area {
     width: 25px;
   }
 
-  /* Services */
   .services-section {
     padding-top: 30px;
   }
@@ -640,7 +631,6 @@ html[dir="ltr"] .logo-area {
     right: -30px;
   }
 
-  /* LTR Support */
   html[dir="ltr"] .main-nav {
     margin-left: -60px;
     margin-right: 0;
@@ -709,7 +699,6 @@ html[dir="ltr"] .logo-area {
 
 @media (max-width: 480px) {
 
-  /* Header */
   .header-inner {
     height: 70px;
   }
@@ -746,7 +735,6 @@ html[dir="ltr"] .logo-area {
     font-size: 12px;
   }
 
-  /* Hero */
   .hero {
     height: 500px;
     padding-top: 115px;
@@ -794,7 +782,6 @@ html[dir="ltr"] .logo-area {
     font-size: 14px;
   }
 
-  /* About */
   .about-us {
     padding: 50px 0;
   }
@@ -854,7 +841,6 @@ html[dir="ltr"] .logo-area {
     right: -30px;
   }
 
-  /* Clients Slider */
   .clients-slider-section {
     padding: 40px 0;
   }
@@ -899,7 +885,6 @@ html[dir="ltr"] .logo-area {
     width: 20px;
   }
 
-  /* Services */
   .services-section {
     padding-top: 25px;
   }
@@ -933,18 +918,15 @@ html[dir="ltr"] .logo-area {
     height: 35px;
   }
 
-  /* Stats Section */
   .stats-grid {
     grid-template-columns: 1fr;
   }
 
-  /* Team Section */
   .team-grid {
     grid-template-columns: 1fr;
     max-width: 400px;
   }
 
-  /* Work Section */
   .work-item {
     flex: 0 0 100%;
   }
@@ -953,7 +935,6 @@ html[dir="ltr"] .logo-area {
     padding: 0 var(--spacing-xl);
   }
 
-  /* Contact Section */
   .form-row {
     flex-direction: column;
     gap: var(--spacing-md);
@@ -963,7 +944,6 @@ html[dir="ltr"] .logo-area {
     padding: var(--spacing-lg);
   }
 
-  /* Footer */
   .card-info p {
     font-size: var(--font-2xl);
   }
@@ -1033,7 +1013,6 @@ html[dir="ltr"] .logo-area {
     right: -25px;
   }
 
-  /* LTR Support */
   html[dir="ltr"] .experience-badge {
     right: -25px;
   }
@@ -1061,7 +1040,6 @@ html[dir="ltr"] .logo-area {
 
 @media (max-width: 360px) {
 
-  /* Header */
   .logo-shape img {
     max-width: 90px;
   }
@@ -1076,7 +1054,6 @@ html[dir="ltr"] .logo-area {
     padding: 0 10px;
   }
 
-  /* Hero */
   .hero {
     height: 450px;
     padding-top: 115px;
@@ -1090,7 +1067,6 @@ html[dir="ltr"] .logo-area {
     font-size: 20px;
   }
 
-  /* About */
   .about-us {
     padding: 40px 0;
   }
@@ -1122,7 +1098,6 @@ html[dir="ltr"] .logo-area {
     font-size: 11px;
   }
 
-  /* Clients Slider */
   .slide-item {
     width: 120px;
     height: 80px;
@@ -1139,7 +1114,6 @@ html[dir="ltr"] .logo-area {
     gap: 12px;
   }
 
-  /* Services */
   .video-placeholder img {
     height: 220px;
   }
@@ -1182,7 +1156,6 @@ html[dir="ltr"] .logo-area {
     font-size: 12px;
   }
 
-  /* LTR Support */
   html[dir="ltr"] .experience-badge {
     left: auto;
     right: -20px;

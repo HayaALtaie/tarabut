@@ -1,8 +1,5 @@
-/* ==========================================
-   CSS Variables (Custom Properties)
-   ========================================== */
+
 :root {
-  /* الألوان الأساسية - Primary Colors */
   --primary-blue: #1062a5;
   --primary-blue-dark: #0d518c;
   --dark-blue: #1f2c56;
@@ -11,14 +8,12 @@
   --sky-blue: #4facfe;
   --stats-blue: #2b7dde;
 
-  /* الألوان الثانوية - Secondary Colors */
   --white: #fff;
   --light-gray: #f1f5f9;
   --text-gray: #677284;
   --border-gray: #e2e8f0;
   --footer-gray: #94a3b8;
 
-  /* الألوان مع الشفافية - Colors with Opacity */
   --overlay-dark: rgba(20, 30, 50, 0.85);
   --overlay-medium: rgba(20, 30, 50, 0.6);
   --overlay-light: rgba(20, 30, 50, 0.1);
@@ -27,7 +22,7 @@
   --white-20: rgba(255, 255, 255, 0.2);
   --white-05: rgba(255, 255, 255, 0.05);
 
-  /* المسافات - Spacing */
+  
   --spacing-xs: 5px;
   --spacing-sm: 10px;
   --spacing-md: 20px;
@@ -37,7 +32,6 @@
   --spacing-3xl: 60px;
   --spacing-4xl: 100px;
 
-  /* الحواف الدائرية - Border Radius */
   --radius-sm: 5px;
   --radius-md: 8px;
   --radius-lg: 12px;
@@ -47,7 +41,6 @@
   --radius-full: 50%;
   --radius-pill: 50px;
 
-  /* الظلال - Shadows */
   --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.2);
   --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -56,13 +49,12 @@
   --shadow-3xl: 0 15px 40px rgba(0, 0, 0, 0.2);
   --shadow-4xl: 0 20px 40px rgba(0, 0, 0, 0.1);
 
-  /* الانتقالات - Transitions */
   --transition-fast: 0.3s;
   --transition-normal: 0.5s;
   --transition-ease: ease;
   --transition-ease-in-out: ease-in-out;
 
-  /* أحجام الخطوط - Font Sizes */
+  
   --font-xs: 11px;
   --font-sm: 13px;
   --font-base: 14px;
@@ -77,14 +69,12 @@
   --font-7xl: 72px;
   --font-8xl: 80px;
 
-  /* أوزان الخطوط - Font Weights */
   --font-normal: 400;
   --font-semibold: 600;
   --font-bold: 700;
   --font-extrabold: 800;
   --font-black: 900;
 
-  /* الأبعاد - Dimensions */
   --container-max: 1280px;
   --container-lg: 1200px;
   --container-md: 1100px;

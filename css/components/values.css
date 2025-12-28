@@ -1,6 +1,3 @@
-/* ==========================================
-   Detailed Values Section Component
-   ========================================== */
 
 .detailed-values-section {
     padding: var(--spacing-4xl) 0;
@@ -52,13 +49,11 @@
     font-size: 40px;
     flex-shrink: 0;
     order: 1;
-    /* Icon on the right for RTL */
 }
 
 .value-detailed-content {
     flex: 1;
     order: 2;
-    /* Text on the left for RTL */
 }
 
 .value-detailed-content h3 {
@@ -76,26 +71,22 @@
     text-align-last: right;
 }
 
-/* LTR Support */
 html[dir="ltr"] .value-detailed-item {
     text-align: left;
 }
 
 html[dir="ltr"] .value-detailed-icon {
     order: 1;
-    /* Icon on the left for LTR */
 }
 
 html[dir="ltr"] .value-detailed-content {
     order: 2;
-    /* Text on the right for LTR */
 }
 
 html[dir="ltr"] .value-detailed-content p {
     text-align-last: left;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .value-detailed-item {
         flex-direction: column;

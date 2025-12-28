@@ -1,6 +1,3 @@
-/* ==========================================
-   Hero Section Component
-   ========================================== */
 
 .hero {
   position: relative;
@@ -91,7 +88,6 @@
 
 .page-hero {
   height: 500px;
-  /* Shorter than home hero */
 }
 
 
